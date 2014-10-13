@@ -1,0 +1,6 @@
+##test users for facebook
+	{name, userID, Email, password}
+	Betty Amfifgedggdi Greenesen	1508827176026186	bqdrlqu_greenesen_1412741859@tfbnw.net	123
+	Patricia Amfaicegggbh Goldmansky	1537755196440918	nruehmr_goldmansky_1412741872@tfbnw.net 	123	
+	Maria Amddabbjghjf Occhinosen	349546618535742	awxepel_occhinosen_1412741863@tfbnw.net	
+	John Amdbacicggfe Huiberg	361561267327668	htzstns_huiberg_1412741867@tfbnw.net

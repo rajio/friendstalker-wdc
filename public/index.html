@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Friend-Tracker Beta</title>
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!-- facebook cut and paste -->
+	<script src="javascripts/fb.js"></script>
+	<div class="container">
+		<h1 id="title"><a>GossipGirl! xoxo	</a></h1>
+		<div id="login-bar">
+			<div
+			class="fb-like"
+			data-send="true"
+			data-width="450"
+			data-show-faces="true">
+		</div>
+	<form action="#" id="username-form">
+		Username <input class="form-control" type="text" name="Username" id="username_input"><br>
+	</form>
+	<form action="#" id="password-form">
+		Password <input class="form-control" type="password" name="Password" id="password_input">
+	</form>
+	<button type="submit" class="btn btn-default" id="sign-in-btn" onclick="validate()">Sign in</button>
+	<p id = "login_message"></p>
+</div>
+<fb:login-button id="fbButton"scope="user_friends,user_tagged_places" onlogin="checkLoginState();">
+	</fb:login-button>
+<div id="button-group">
+	<button id="wrapper-first-element" type="button" class="btn btn-warning group-tab">Who's where?</button>
+	<button type="button" class="btn btn-primary group-tab">Groups</button>
+	<button type="button" class="btn btn-success group-tab" onclick="fbLogout();">Logout</button>
+	<form id="friend-search" role="form">
+		<label class="sr-only" for="exampleInputEmail2">Search for someone!</label>
+		<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Search for someone!">
+	</form>
+	<button type="button" class="btn btn-info" id="hide-button" onclick="contenthider()">Hide</button>
+
+</div>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+<!-- this is the container for the friends viewing pane -->
+<div id="content-wrapper">
+	<!-- this is the container for each friend -->
+	<div class="friend-box">
+		<img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture">
+		<div class="friend-box-statuses">
+			<ul class="status-list">
+				<li class="text-center">Out fishing now!</li>
+				<li class="text-center">Headed to Uni!</li>
+				<li class="text-center">Great lunch in town today with @friend</li>
+			</ul>
+		</div>
+		<div class="friend-interface">
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button>
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button>
+		</div>
+	</div>
+	<div class="friend-box">
+		<img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture">
+		<div class="friend-box-statuses">
+			<ul class="status-list">
+				<li>Out fishing now!</li>
+				<li>Headed to Uni!</li>
+				<li>Great lunch in town today with @friend</li>
+			</ul>
+		</div>
+		<div class="friend-interface">
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button>
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button>
+		</div>
+	</div>
+	<div class="friend-box">
+		<img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture">
+		<div class="friend-box-statuses">
+			<ul class="status-list">
+				<li>Out fishing now!</li>
+				<li>Headed to Uni!</li>
+				<li>Great lunch in town today with @friend</li>
+			</ul>
+		</div>
+		<div class="friend-interface">
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button>
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button>
+		</div>
+	</div>
+	<div class="friend-box">
+		<img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture">
+		<div class="friend-box-statuses">
+			<ul class="status-list">
+				<li>Out fishing now!</li>
+				<li>Headed to Uni!</li>
+				<li>Great lunch in town today with @friend</li>
+			</ul>
+		</div>
+		<div class="friend-interface">
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button>
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button>
+		</div>
+	</div>
+	<div class="friend-box">
+		<img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture">
+		<div class="friend-box-statuses">
+			<ul class="status-list">
+				<li>Out fishing now!</li>
+				<li>Headed to Uni!</li>
+				<li>Great lunch in town today with @friend</li>
+			</ul>
+		</div>
+		<div class="friend-interface">
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button>
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button>
+		</div>
+	</div>
+	<div class="friend-box">
+		<img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture">
+		<div class="friend-box-statuses">
+			<ul class="status-list">
+				<li>Out fishing now!</li>
+				<li>Headed to Uni!</li>
+				<li>Great lunch in town today with @friend</li>
+			</ul>
+		</div>
+		<div class="friend-interface">
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button>
+			<button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button>
+		</div>
+	</div>
+</div>
+</div>
+<button type="button" id="map-hider" onclick="maphider()"class="btn btn-info">Hide Map</button>
+<!-- This is the google map  plug in. -->
+<div id="map-canvas"></div>
+<!-- This is the chat box and container-->
+<div id="chat-box">
+	<p>som text</p>
+	<textarea class="form-control" rows="3"></textarea>
+</div>
+</body>
+<!-- JQuery include -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- My own script include -->
+<script src="javascripts/script.js"></script>
+<!-- GMaps JS include -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHqIpKIfjah4kTlETul6Ys_twRoHC9hAY"></script>
+<!-- My Maps JS file include -->
+<script src="javascripts/googleMaps.js"></script>
+<footer>
+	<span>©Rajesh Durai(a1675993), Ong Zhao Cheng(a1675920), Shun Him Chow(a1676315)</span>
+</footer>
+</html>
+<!-- Group members: Rajesh Durai(a1675993), Ong Zhao Cheng(a1675920), Shun Him Chow(a1676315) -->

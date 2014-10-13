@@ -1,0 +1,181 @@
+* {
+	/*background-color: #4099FF;*/
+/*	border: 1px solid;
+*/}
+
+html{
+	padding: 0 0 0 0;
+	height: 100%;
+	width: 100%;
+}
+
+#title {
+	padding: 3px 0 0 0;
+	font-size: 5em;
+	font-weight: 500;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 500;
+	width: 50%;
+	float: left;
+	display: inline;
+	margin: 1% 0 2% -15px;
+	text-decoration: none;
+}
+
+#map-canvas{
+	width: 50%;
+	height:80%;
+	float: right;
+	margin: 2%;	
+	position: absolute;
+	right: -0.5%;
+	top: 22.5%;
+}
+
+#map-hider{
+	float: right;
+	position: absolute;
+	right: 1.5%;
+	top: 21%;
+}
+
+#login-bar{
+	position: absolute;
+	right: -10%;
+	top: 0%;
+	width: 45%;
+	margin-top: 1%;
+	display: block;
+	margin-bottom: 3%;
+}
+
+#sign-in-btn{
+	margin-top: 3.2%;
+	margin-left: 1%;	
+}
+
+#username-form{
+	margin-right: 25px;
+	display: inline;
+	float: left;
+}
+#password-form{
+	float: left;
+	display: inline;
+	margin-bottom: 25px;
+}
+
+/*This is the LHS friend content display*/
+
+#content-wrapper{
+	display: block;
+	float: left;
+	width: 46%;
+	height: 900px;
+	margin: 0 0 0 0;
+	background-color: #3B5998;
+	border-radius: 4px;
+	padding-top: 1%; 
+	position: static;
+	overflow: scroll;	
+}
+
+#button-group{
+	width: 46%;
+}
+
+#wrapper-first-element{
+	margin-left: 0.1%;
+}
+
+.group-tab{
+	margin-left: 1%;
+}
+
+#friend-search{
+	width: 30%;
+	display: inline-block;
+	margin-left: 1%;
+}
+
+/* This is the friend-box div and all the elements contained inside */
+.friend-box{
+	border: 1px solid grey;
+	border-radius: 4px;
+	height: 20%;
+	width: 95%;
+	margin: 14px auto 0 auto;
+	padding: 1%;
+	background-color: white;
+	cursor: pointer;
+	-webkit-duration: .3s;
+	-moz-duration: .3s;
+	-o-duration: .3s;
+	transition-duration: .3s;
+}
+
+.friend-box:hover{
+	background-color: lightblue;
+}
+
+.friend-box-picture{
+	margin: 3% 1% auto 1%;
+	display: inline;
+	float: left;
+}
+
+.friend-box-statuses{
+	width: 40%;
+	float: left;
+	display: inline;
+	height: 98%;
+	margin: 25px 1% auto 1%;
+	top: auto;
+	bottom: auto;
+}
+
+.status-list{
+	list-style: none;
+	margin: 0 0 0 -25%;
+	text-align: center;
+}
+
+.friend-interface{
+	width: 30%;
+	float: right;
+	margin: 0 2% 0 0;
+	padding: 5% 0 0 0;
+	height: 100%;
+}
+
+.my-button-styling{
+	display: block;
+	width: 100%;
+	margin: 7% 0 0 0;
+}
+
+#chat-box{
+	background-color: #000;
+	width:10%;
+	height: 50%;
+	float: right;
+}
+
+#buttonbox{
+	height: 100px;
+	width: 100px;
+}
+
+#login_message{
+	font-size: 0.9em;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	display: block;
+	float: right;
+}
+
+footer{
+	margin: 10% auto auto 10%;
+	position: absolute;
+	bottom: -80%;
+}
