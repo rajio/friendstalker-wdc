@@ -5,7 +5,7 @@ function initialize() {
 	var mapOptions = {
 		center: new google.maps.LatLng(-34.9859652,138.7019549),
 		zoom : 10,
-		scrollwheel: false
+		scrollwheel: true
 	};
 	map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 	//getting json data
