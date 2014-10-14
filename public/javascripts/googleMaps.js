@@ -23,7 +23,8 @@ function initialize() {
 	                                     friend.lng),
 	            title: friend.name,
 	            map: map
-	        }); 
+	        });
+	        $("#content-wrapper").append('<div class="friend-box"><img class="friend-box-picture" src="images/1258567324578s.jpg" alt="profile picture"><div class="friend-box-statuses"><ul class="status-list"><li class="text-center">'+friend.name+'</li><li class="text-center">'+friend.lat+'</li><li class="text-center">'+friend.lng+'</li></ul></div><div class="friend-interface"><button type="button" class="btn btn-primary btn-sm my-button-styling">Message!</button><button type="button" class="btn btn-primary btn-sm my-button-styling">Action!</button></div></div>'); 
 	      index++;
 	    }
 	  }
