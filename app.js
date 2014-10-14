@@ -12,7 +12,7 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.engine('handlebars', handlebars({defaultLayout:'main'}))
+app.engine('handlebars', handlebars({defaultLayout:'index'}))
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 

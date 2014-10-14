@@ -27,13 +27,13 @@ router.get('/test', function(req, res) {
 	res.render('test', {sometext: 'This text  has been inserted as a JsoN object from index.js' });
 });
 
-router.get('/hello',function(req,res){
-	res.render('hello')
+router.get('/',function(req,res){
+	res.render()
 })
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get('/index', function(req, res) {
+  res.render('index');
 });
 router.get("/fish",function(req,res){
 	res.send("hello")
