@@ -28,7 +28,7 @@ router.get('/test', function(req, res) {
 });
 
 router.get('/',function(req,res){
-	res.render()
+	res.render(index.handlebars)
 })
 
 /* GET home page. */
