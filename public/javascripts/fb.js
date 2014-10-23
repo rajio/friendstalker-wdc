@@ -1,6 +1,6 @@
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '698526993563552',
+      appId      : '1479563595657728',
       xfbml      : true,
       version    : 'v2.1'
     });
@@ -22,7 +22,11 @@ function checkLoginState(){
     // remove facebook button
     var loginButton = document.getElementById("fbButton");
     loginButton.parentNode.removeChild(loginButton);
-    addFriendsToMap();
+
+    //Send access token to server
+    authToServer(response,function(){
+      addFriendsToMap();
+    });
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
@@ -50,7 +54,7 @@ function checkLoginState(){
       if (authReq.readyState==4 && authReq.status==200){
         console.log("logged in to server");
         callback();
-      }
+      } 
     }
     authReq.open("POST", "http://localhost:3000/auth", true);
     authReq.setRequestHeader('Content-Type','application/json');
@@ -90,8 +94,7 @@ function fbLogout(){
     // user is now logged out
     console.log('user logged out')
   });
-}
-
+};
 
 
 

@@ -31,11 +31,11 @@ function addUser(){
 				}); 
 		}
 	}
+	var formData = {"name":name,"lat":lat,"lng":lng};
+	addReq.open("POST",postURL,true);
+	addReq.setRequestHeader('Content-Type', 'application/json');
+	addReq.send(JSON.stringify(formData));
 }
-//var formData = {"name":name,"lat":lat,"lng":lng};
-// addReq.open("POST",postURL,true);
-// addReq.setRequestHeader('Content-Type', 'application/json');
-// addReq.send(JSON.stringify(formData));
 
 //addDomListener
 google.maps.event.addDomListener(window, 'load', initialize);

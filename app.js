@@ -5,11 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var handlebars = require('express-handlebars')
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var config = require('./config');
+var session = require('express-session');
 var app = express();
+app.use(cookieParser());
+app.use(session({secret:config.facebook.sessionSecret,saveUninitialized:true,resave:true}));
+app.use(express.Router());
+
+
+
 
 // view engine setup
 app.engine('handlebars', handlebars({defaultLayout:'index'}))
@@ -20,8 +26,8 @@ app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', routes);
 app.use('/users', users);
@@ -56,6 +62,11 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+
+
+
+
 
 
 module.exports = app;
